@@ -19,28 +19,36 @@
 h1 { 
     font-size: 5vw;
     margin-left: 2vw;
-    color: white; /* can be changed */
 }
 h2 { 
     font-size: 20pt;
 }
 h3 { 
-    font-size: 16pt;
     float: none;
-    color: white;
+    font-size: 15pt;
 }
+
+h4 {
+    font-size: 12pt;
+}
+h5 { 
+    font-size: 10pt;
+}
+
 p { 
     font-size: 12pt;
 }
 
-/* -------------- section settings -------------- */
-
-body {/* referenced from colour pallet https://www.w3schools.com/colors/colors_picker.asp */
-    background-color: #003300;
+body {
+    background-color: #ffffff;
 }
+
+/* ---------------- Semantic Element settings -------------------------------------- */
+
+
 header { 
     /* background-color:  #006600; */
-    background-image: url("../images/hiking.JPG");
+    background-image: url("images/hiking.jpg");
     height: 20vw;
     background-size: cover;
     background-position: 50% 30%;
@@ -51,27 +59,6 @@ header {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-}
-
-#logo { 
-    height: 8vw; 
-}
-#motto { /*  Using flexbox to allow slogan underneath title */
-    color: white; 
-    font-style:italic;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-size: 0.4em;
-}
-
-.quote{ /* Quotation styling */
-    padding: 25px;
-    color: white;
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.25em;
 }
 
 nav { 
@@ -130,7 +117,8 @@ section { /* aligns subsequent sections to the column format consistent with mai
 }
 
 footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_class_clear.asp */
-    background-color: #8c9966;
+    background-color: #2c2c2c;
+    color: #cecece;
 	border-top: 1px solid gray;
 	text-align: center;
 	padding: 2vw;
@@ -149,15 +137,87 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 	text-decoration: underline;
     cursor:pointer;
 } 
-/* -------------- Index Page Styling -------------- */ 
 
-/* GR 11-25 center align blag page title */
+/* --------------------------------------- General Styling ------------------------- */
+
+#logo { 
+    height: 8vw; 
+}
+#motto { /*  Using flexbox to allow slogan underneath title */
+    color: rgb(0, 0, 0); 
+    font-style:italic;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 0.4em;
+}
+
+.quote{ /* Quotation styling */
+    padding: 25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.underlineTitle { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
+    border-bottom: 1px solid #b8b2cf;
+    margin-bottom: 10px;
+}
+
+/* -------------------- Landing / Index / Meet the Team Page Styling ------------------------- */ 
+
 .projectTitle{
     text-align: center;
     margin-top:20px;
     margin-bottom:20px;
     color: #b8c2cf;
 }
+
+.folks { /*  the bio panels to go in rows, wrapping around if made smaller */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.bio { /* sets the bio panels to arrange their contents vertically, full-width on small screens */
+    width: 100vw;
+    border-right: 1px solid rgb(59, 59, 59);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    margin: .5vw;
+
+}
+.justify { /* AH/SV 12-04 - sets the paragraphs to justify instead of centre */
+    text-align: justify;
+}
+
+.profiles { /* AH/SV 12-04 - sets images to greyscale for bios */
+    filter: grayscale(100%);
+    border-radius: 100%;
+    padding: 15px;
+
+}
+.profiles:hover { /* AH/SV 12-04 - bio images switch to colour on mouseover */
+    filter: none;
+}
+
+.name {
+    font-size: 15pt;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.role {
+    font-size: 10pt;
+    font-style: italic;
+    padding: 5px;
+}
+
+
 
 #landingPic { /* somehow I can't get this image to come in */
     background-image: src="/images/hiking.jpg";
@@ -177,9 +237,9 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     padding-top: 4%;
     padding-left: 15%;
     padding-right: 15%;
-    color: white;
-    background-color: #8c9966;
-    opacity: 0.6;
+    color: rgb(0, 0, 0);
+    background-color: #c5cfa7;
+    opacity: 1;
     width: 100%;
     height: 20%;
 }
@@ -189,12 +249,21 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin-top: 20px;
 }
 
-.underlineTitle { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
-    border-bottom: 1px solid #b8b2cf;
-    margin-bottom: 10px;
-}
 
-.getinvolvedElement1 { 
-    padding: 10px;
-    color: white;
+/* --------------------------------------- Methodology Page Styling ------------------------- */ 
+
+/* --------------------------------------- Solution Page Styling ------------------------- */ 
+
+
+@media screen and (min-width: 800px) {
+    /* ---------- About Us styling for Landing page ---------- */
+        .bio { /* AH/SV 12-04 - Sets the width of the bio boxes so that three fit on a larger screen */
+        width: 20vw;
+    }
+    .profiles { /* AH/SV 12-04 - sets images to greyscale for bios */
+        filter: grayscale(100%);
+    }
+    .profiles:hover { /* AH/SV 12-04 - bio images switch to colour on mouseover */
+        filter: none;
+    }
 }
