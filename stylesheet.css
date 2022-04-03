@@ -112,6 +112,8 @@ nav a.icon {
     display: block;
     text-align: left;
 }
+
+
 /* ---------------- Navbar settings END ------------- */
 
 main { /*  sets up flexbox, to simplify positioning of everything. */
