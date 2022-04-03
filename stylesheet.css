@@ -9,7 +9,7 @@
 */
 
 * { /* settings for every possible element on the page */
-    font-family: 'Tahoma', 'Sans-seriff';
+    font-family: 'Helvetica', 'Sans-seriff';
     margin:0;
     box-sizing: border-box; /* as per w3schools, changes calculation of total size of elements to give better CSS control */
 }
@@ -27,18 +27,15 @@ h3 {
     float: none;
     font-size: 15pt;
 }
-
 h4 {
     font-size: 12pt;
 }
 h5 { 
     font-size: 10pt;
 }
-
 p { 
-    font-size: 12pt;
+    font-size: 11pt;
 }
-
 body {
     background-color: #ffffff;
 }
@@ -47,7 +44,6 @@ body {
 
 
 header { 
-    /* background-color:  #006600; */
     background-image: url("images/hiking.jpg");
     height: 30vw;
     background-size: cover;
@@ -65,45 +61,46 @@ header {
     height: 8vw;
     padding-right: 30vw;
 }
-#motto { /*  Using flexbox to allow slogan underneath title */
-    color: #000000; 
-    font-style:italic;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-size: 0.35em;
-    padding-right: 30vw;
-}
+
+/* ---------------- Navbar settings -------------------------------------- */
 
 nav { 
     font-size: 12pt;
-    background-color: #8c9966;     /*  colour palette */
+    background-color: rgb(114, 175, 85);     /*  colour palette */
     overflow: hidden; /* - as per https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
+
 nav a { 
+    font-weight:bold;
     float: left;
     display: block;
-    color: white; 
+    color: rgb(0, 0, 0); 
     text-align: center;
     padding: 10px;
+    padding-right:5vw;
+    padding-left:5vw;
     transition: all .3s ease;
-    text-decoration: none; /*avoids annoying underlines */
+    text-decoration: none; /*avoids underlines */
+    border-right:1px solid #bbb;
 } 
+
 nav a:hover { 
-    background-color: #be1531; /*  colour palette */
+    background-color: #0d8a41; /*  colour palette */
 }          
 nav a.active { 
     background-color: #eceee6; /*  colour palette  */
 }
-nav a:not(:first-child) {
-    display: none;
-}
+
 nav a.icon {
     float: right;
     display: block;
 }
 .topnav.responsive {
     position: relative;
+    position: fixed;
 }
 .topnav.responsive a.icon {
     position: absolute;
@@ -115,6 +112,7 @@ nav a.icon {
     display: block;
     text-align: left;
 }
+/* ---------------- Navbar settings END ------------- */
 
 main { /*  sets up flexbox, to simplify positioning of everything. */
     display: flex;
@@ -124,6 +122,8 @@ main { /*  sets up flexbox, to simplify positioning of everything. */
 
 section { /* aligns subsequent sections to the column format consistent with main */
     margin: 1vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     order: 1;
     flex: 80vw;
     display: flex;
@@ -143,11 +143,11 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 .footernotes {
     font-size: 10pt;
 }
-.deadlink { /* JD 12-06 styling leads to hover effect below  */
-	color: black;
+.deadlink { 
+    color: #cecece;
 	text-decoration:none;
 }    
-.deadlink:hover { /* JD 12-06 Creates the appearance of a clickable link, regardless if it does anything or not  */
+.deadlink:hover { 
 	text-decoration: underline;
     cursor:pointer;
 } 
@@ -169,6 +169,11 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin-bottom: 10px;
 }
 
+.ContentParagraph { /* JD 12-07 -  styling for paragraphs explaining content */
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
 /* -------------------- Landing / Index / Meet the Team Page Styling ------------------------- */ 
 
 .projectTitle{
@@ -186,7 +191,6 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 .bio { /* sets the bio panels to arrange their contents vertically, full-width on small screens */
     width: 100vw;
-    border-right: 1px solid rgb(59, 59, 59);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -194,17 +198,17 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin: .5vw;
 
 }
-.justify { /* AH/SV 12-04 - sets the paragraphs to justify instead of centre */
+.justify { 
     text-align: justify;
 }
 
-.profiles { /* AH/SV 12-04 - sets images to greyscale for bios */
+.profiles { /*sets images to greyscale for bios */
     filter: grayscale(100%);
     border-radius: 100%;
     padding: 15px;
 
 }
-.profiles:hover { /* AH/SV 12-04 - bio images switch to colour on mouseover */
+.profiles:hover { /* bio images switch to colour on mouseover */
     filter: none;
 }
 
@@ -221,8 +225,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 }
 
 
-
-#landingPic { /* somehow I can't get this image to come in */
+#landingPic { 
     background-image: src="/images/hiking.jpg";
     height: 50vw;
     background-size: cover;
@@ -246,13 +249,13 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 @media screen and (min-width: 800px) {
     /* ---------- About Us styling for Landing page ---------- */
-        .bio { /* AH/SV 12-04 - Sets the width of the bio boxes so that three fit on a larger screen */
+        .bio { 
         width: 20vw;
     }
-    .profiles { /* AH/SV 12-04 - sets images to greyscale for bios */
+    .profiles { 
         filter: grayscale(100%);
     }
-    .profiles:hover { /* AH/SV 12-04 - bio images switch to colour on mouseover */
+    .profiles:hover { 
         filter: none;
     }
 }
