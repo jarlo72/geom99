@@ -55,7 +55,7 @@
       const sketch = new Sketch({
         layer: graphicsLayer,
         view: view,
-        availableCreateTools: ["polyline"],
+        availableCreateTools: ["polyline", "polygon", "rectangle"],
         creationMode: "update",
         updateOnGraphicClick: true,
         visibleElements: {
@@ -65,12 +65,12 @@
           },
           selectionTools:{
             "lasso-selection": false,
+            "rectangle-selection": false,
           },
           settingsMenu: false,
           undoRedoMenu: false
         }
       });
-
       view.ui.add(sketch, "bottom-right");
 
       const measurements = document.getElementById("measurementBox");
