@@ -264,3 +264,15 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
         filter: none;
     }
 }
+
+/* --------------------------------------- ArcGIS API for JavaScript Page ------------------------- */ 
+
+/* ----- Measurement box style ------ */
+#measurementBox {
+    padding: 4px 8px;
+    font-size: 16px;
+    bottom: 15px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+  }
