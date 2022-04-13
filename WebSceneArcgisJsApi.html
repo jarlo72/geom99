@@ -65,16 +65,24 @@
           },
           selectionTools:{
             "lasso-selection": false,
-            "rectangle-selection": false,
           },
           settingsMenu: false,
           undoRedoMenu: false
         }
       });
-      view.ui.add(sketch, "bottom-right");
+      view.ui.add(sketch, "bottom-left");
 
-      const measurements = document.getElementById("measurementBox");
+      const measurements = document.getElementById("measurements");
         view.ui.add(measurements, "manual");
+      
+      function getLength(line) {
+        const geodesicLength = geometryEngine.geodesicLength(line, "kilometers");
+        const planarLength = geometryEngine.planarLength(line, "kilometers");
+
+        measurements.innerHTML =
+          "<b>Geodesic length</b>:  " + geodesicLength.toFixed(2) + " km" + " |   <b>Planar length</b>: " + planarLength.toFixed(2) + "  km";
+
+      }
 
   });
   </script>
@@ -82,7 +90,7 @@
 <body>
   <div id="viewDiv">
 
-    <div id="measurementBox">
+    <div id="measurements">
 
     </div>
   </div>
