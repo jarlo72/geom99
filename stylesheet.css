@@ -21,11 +21,11 @@ h1 {
     margin-left: 2vw;
 }
 h2 { 
-    font-size: 20pt;
+    font-size: 30pt;
 }
 h3 { 
     float: none;
-    font-size: 15pt;
+    font-size: 18pt;
 }
 h4 {
     font-size: 12pt;
@@ -34,7 +34,7 @@ h5 {
     font-size: 10pt;
 }
 p { 
-    font-size: 11pt;
+    font-size: 14pt;
 }
 body {
     background-color: #ffffff;
@@ -168,12 +168,15 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 .underlineTitle { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
     border-bottom: 1px solid #b8b2cf;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+
 }
 
 .ContentParagraph { /* JD 12-07 -  styling for paragraphs explaining content */
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-top:40px;
+    padding-bottom:40px;
 }
 
 /* -------------------- Landing / Index / Meet the Team Page Styling ------------------------- */ 
@@ -181,8 +184,8 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 .projectTitle{
     text-align: center;
     margin-top:20px;
-    margin-bottom:20px;
-    color: #828a94;
+    margin-bottom:20px; 
+    color: #0d8a41;
 }
 
 .folks { /*  the bio panels to go in rows, wrapping around if made smaller */
@@ -261,3 +264,15 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
         filter: none;
     }
 }
+
+/* --------------------------------------- ArcGIS API for JavaScript Page ------------------------- */ 
+
+/* ----- Measurement box style ------ */
+#measurements {
+    padding: 4px 8px;
+    font-size: 16px;
+    bottom: 15px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+  }
