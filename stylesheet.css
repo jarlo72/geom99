@@ -268,7 +268,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 /* --------------------------------------- ArcGIS API for JavaScript Page ------------------------- */ 
 
 /* ----- Measurement box style ------ */
-#measurementBox {
+#measurements {
     padding: 4px 8px;
     font-size: 16px;
     bottom: 15px;
