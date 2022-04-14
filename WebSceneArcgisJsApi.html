@@ -12,6 +12,16 @@
       height: 100%;
       width: 100%;
     }
+
+    #measurements { 
+        padding: 4px 8px;
+        font-size: 16px;
+        bottom: 15px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
+      }
+
   </style>
   <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
   <script src="https://js.arcgis.com/4.23/"></script>
@@ -19,19 +29,25 @@
   <script>
     require([
       "esri/config",
+      "esri/Map",
 
       "esri/WebScene",
       "esri/views/SceneView",
       "esri/widgets/Legend",
 
+      "esri/widgets/Expand",  
+      "esri/widgets/BasemapGallery",
+
       "esri/widgets/Sketch",
       "esri/Graphic",
       "esri/layers/GraphicsLayer",
-      "esri/geometry/geometryEngine",
+      "esri/geometry/geometryEngine"
 
-    ], function(esriConfig, WebScene, SceneView, Legend, Sketch, Graphic, GraphicsLayer, geometryEngine,) {
+    ], function(esriConfig, Map, WebScene, SceneView, Legend, Expand, BasemapGallery, Sketch, Graphic, GraphicsLayer, geometryEngine,) {
 
     esriConfig.apiKey = "AAPKafe6cece6b3c4b9c87187d48725b5e00VnU7KKuFgK778kAvYJpx4ZC8w-ABB6lZWCVAT2CnL5q96pcPfg9TcuDZxJmK6_-9";
+      
+      const map = new Map ();
 
       const webscene = new WebScene({
         portalItem: {
@@ -43,19 +59,47 @@
         container: "viewDiv",
         map: webscene
       });
-      
-      const legend = new Legend ({
-        view: view
+
+      // Basemap widget
+      const basemapGallery = new BasemapGallery({
+        view: view,
+        container: document.createElement("div"),
+        source: {
+          query: {
+            title: '"World Basemaps for Developers" AND owner:esri'
+          }
+        }
       });
-      view.ui.add(legend, "top-right");
+
+      const bgExpand = new Expand({
+          view: view,
+          content: basemapGallery
+        });
+
+      view.ui.add(bgExpand, "bottom-right"); // Add to the view
+
+      // Legend widget
+      const legend = new Legend ({
+        view: view,
+        container: document.createElement("div")
+      });
+
+      const bgExpand2 = new Expand({
+          view: view,
+          content: legend
+        });
+
+      view.ui.add(bgExpand2, "top-right");      
+      
+      // Add polyline, find length widget
 
       const graphicsLayer = new GraphicsLayer();
-        map.add(graphicsLayer);
+      map.add(graphicsLayer);
       
       const sketch = new Sketch({
         layer: graphicsLayer,
         view: view,
-        availableCreateTools: ["polyline", "polygon", "rectangle"],
+        availableCreateTools: ["polyline"],
         creationMode: "update",
         updateOnGraphicClick: true,
         visibleElements: {
@@ -70,10 +114,33 @@
           undoRedoMenu: false
         }
       });
+
       view.ui.add(sketch, "bottom-right");
 
       const measurements = document.getElementById("measurements");
-        view.ui.add(measurements, "manual");
+      view.ui.add(measurements, "manual");
+
+      sketch.on("update", (e) => {
+        const geometry = e.graphics[0].geometry;
+
+        if (e.state === "start") {
+            switchType(geometry);
+          }
+
+          if (e.state === "complete") {
+            graphicsLayer.remove(graphicsLayer.graphics.getItemAt(0));
+            measurements.innerHTML = null;
+          }
+
+          if (
+            e.toolEventInfo &&
+            (e.toolEventInfo.type === "scale-stop" ||
+              e.toolEventInfo.type === "reshape-stop" ||
+              e.toolEventInfo.type === "move-stop")
+          ) {
+            switchType(geometry);
+          }
+      });
       
       function getLength(line) {
         const geodesicLength = geometryEngine.geodesicLength(line, "kilometers");
@@ -89,10 +156,8 @@
 </head>
 <body>
   <div id="viewDiv">
-
-    <div id="measurements">
-
-    </div>
+    <div id="measurements" class="esri-widget">
+  </div>
   </div>
 </body>
 </html>
