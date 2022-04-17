@@ -262,7 +262,71 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 
 /* --------------------------------------- Methodology Page Styling ------------------------- */ 
-
+.ContentParagraph1 { /* styling for intial paragraph on this page */
+    padding-top:10px;
+    padding-bottom:5px;
+}
+.underlineTitle1 { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
+    border-bottom: 1px solid #b8b2cf;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+}
+.ContentArticle { /* styling for paragraphs explaining articles */
+    padding-top:2px;
+    padding-bottom:2px;
+}
+.serve {                /* Sets the aside so that the text will centre on the image, or vise-versa depending on screen size */
+    display: flex;      /* Also establishes the container to flexbox for future formatting */
+    height:max-content;
+    align-items: center;
+    margin-top: 10vw;
+}
+.serve p {              /* the text looks nicer when it lines up on both edges */
+    text-align:justify;
+}
+.serve:first-child {    /* Removes the spacing on the first element so we don't get weird gaps */
+    margin-top: 0;
+    padding-top: 0;
+}
+.introText{
+    text-align:justified
+}
+.leftText {             /*Left-aligned sections use default attributes */
+    flex-direction: row;
+}
+.rightText {            /*Attributes for right-aligned sections: */
+    flex-direction: row-reverse;
+}
+.rightText h3 {
+    text-align: right;
+}
+p.rightP {              /* SV 12-08 - override the widening, move the signatures to the right */
+    text-align: right;
+}
+.picBox { /* Sets the image width for the page at any resolution, but hides it for small screens */
+    width: 30vw;
+    display: none;
+}
+.picSet {               /* Setting the image max-sizing, which also controls the article size on large screens, and rounds the corners*/
+    max-width: 28vw;
+    max-height: 300px;
+    border-radius: 10px;
+}
+.smallimage { /*  Setting the image max-sizing, which also controls the article size on large screens, and rounds the corners */
+    float: right;
+    border: 1px solid #555; 
+    max-width: 28vw;
+    max-height: 200px;
+    border-radius: 10px; 
+}
+.smallimage2 { /* JD 12-07 - Image styling for this specific section */
+    float: left;
+    border: 2px solid #555;
+    max-width: 28vw;
+    max-height: 200px;
+    border-radius: 10px;
+}
 /* --------------------------------------- Solution Page Styling ------------------------- */ 
 
 
@@ -290,10 +354,3 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin-right: -50%;
     transform: translate(-50%,-50%);
   }
-
-.leftText {             /*Left-aligned sections use default attributes */
-    flex-direction: row;
-}
-.rightText {            /*Attributes for right-aligned sections: */
-    flex-direction: row-reverse;
-}
