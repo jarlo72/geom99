@@ -9,7 +9,7 @@
 */
 
 * { /* settings for every possible element on the page */
-    font-family: 'Helvetica', 'Sans-seriff';
+    font-family: 'Helvetica', 'Sans-serif';
     margin:0;
     box-sizing: border-box; /* as per w3schools, changes calculation of total size of elements to give better CSS control */
 }
@@ -262,7 +262,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 
 /* --------------------------------------- Methodology Page Styling ------------------------- */ 
-.ContentParagraph1 { /* styling for intial paragraph on this page */
+.ContentParagraph1 { /* styling for initial paragraph on this page */
     padding-top:10px;
     padding-bottom:5px;
 }
@@ -278,7 +278,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 }
 .serve {                /* Sets the aside so that the text will centre on the image, or vise-versa depending on screen size */
     display: flex;      /* Also establishes the container to flexbox for future formatting */
-    height:max-content;
+    height: max-content;
     align-items: center;
     margin-top: 10vw;
 }
