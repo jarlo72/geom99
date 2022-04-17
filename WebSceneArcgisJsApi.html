@@ -33,6 +33,7 @@
     
   </style>
   <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css">
+  <link rel="stylesheet" href="stylesheet.css">
   <script src="https://js.arcgis.com/4.23/"></script>
 
   <script>
@@ -122,7 +123,7 @@
       view.ui.add(bgExpand2, "top-right");      
       
 
-      // Elevation profile widget
+      // Elevation profile widget from https://developers.arcgis.com/javascript/latest/sample-code/widgets-elevation-profile/
       const elevationProfile = new ElevationProfile({
         view: view,
         // configure widget with desired profile lines
@@ -134,15 +135,12 @@
             type: "view" // second profile samples the view and shows building profiles
           }
         ],
-        // hide the select button
-        // this button can be displayed when there are polylines in the
-        // scene to select and display the elevation profile for
         visibleElements: {
           selectButton: false
         }
       });
 
-      // // code from Add polyline, find length widget but works to display Elevation??
+      // code from Add polyline, find length widget but works to display Elevation somehow
 
       const graphicsLayer = new GraphicsLayer();
       webscene.add(graphicsLayer);
@@ -159,6 +157,7 @@
 
       view.ui.add(bgExpand3, "bottom-left");
 
+      // VITA logo widget
       view.ui.add("apiLogo", "bottom-right")
 
   });

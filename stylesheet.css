@@ -80,8 +80,8 @@ nav a {
     color: rgb(0, 0, 0); 
     text-align: center;
     padding: 10px;
-    padding-right:5vw;
-    padding-left:5vw;
+    padding-right:2vw;
+    padding-left:2vw;
     transition: all .3s ease;
     text-decoration: none; /*avoids underlines */
     border-right:1px solid #bbb;
@@ -97,6 +97,20 @@ nav a.active {
 nav a.icon {
     float: right;
     display: block;
+}
+
+nav a.solutionlink {
+	float:right;
+	display: block;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	padding-left: 2vw;
+    Padding-right: 2vw;	
+	border-left:1px solid #bbb;
+	text-decoration: none;
+}
+nav a:hover.solutionlink { 
+    background-color: #ffae00; /*  colour palette */
 }
 .topnav.responsive {
     position: relative;
