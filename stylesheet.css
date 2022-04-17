@@ -156,7 +156,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 /* --------------------------------------- General Styling ------------------------- */
 
-
+/* DEAD TEXT */
 .quote{ /* Quotation styling */
     padding: 25px;
     color: rgb(0, 0, 0);
@@ -276,3 +276,10 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin-right: -50%;
     transform: translate(-50%,-50%);
   }
+
+.leftText {             /*Left-aligned sections use default attributes */
+    flex-direction: row;
+}
+.rightText {            /*Attributes for right-aligned sections: */
+    flex-direction: row-reverse;
+}
