@@ -184,13 +184,13 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     border-bottom: 1px solid #b8b2cf;
     margin-bottom: 20px;
     text-align: center;
-    padding: 20px;
+    padding-top: 20px;
 
 }
 
 .ContentParagraph { /* JD 12-07 -  styling for paragraphs explaining content */
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top:10px;
+    padding-bottom:5px;
 }
 
 /* -------------------- Landing / Index / Meet the Team Page Styling ------------------------- */ 
@@ -280,7 +280,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     display: flex;      /* Also establishes the container to flexbox for future formatting */
     height: max-content;
     align-items: center;
-    margin-top: 10vw;
+    margin-top: 1vw;
 }
 .serve p {              /* the text looks nicer when it lines up on both edges */
     text-align:justify;
@@ -306,7 +306,6 @@ p.rightP {              /* SV 12-08 - override the widening, move the signatures
 }
 .picBox { /* Sets the image width for the page at any resolution, but hides it for small screens */
     width: 30vw;
-    display: none;
 }
 .picSet {               /* Setting the image max-sizing, which also controls the article size on large screens, and rounds the corners*/
     max-width: 28vw;
