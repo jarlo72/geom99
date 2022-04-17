@@ -344,7 +344,8 @@ p.rightP {              /* SV 12-08 - override the widening, move the signatures
 }
 
 .solutionImage{
-    margin: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /* --------------------------------------- ArcGIS API for JavaScript Page ------------------------- */ 
