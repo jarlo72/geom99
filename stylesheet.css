@@ -343,6 +343,10 @@ p.rightP {              /* SV 12-08 - override the widening, move the signatures
     }
 }
 
+.solutionImage{
+    margin: 15%;
+}
+
 /* --------------------------------------- ArcGIS API for JavaScript Page ------------------------- */ 
 
 /* ----- Measurement box style ------ */
