@@ -110,7 +110,7 @@ nav a.solutionlink {
 	text-decoration: none;
 }
 nav a:hover.solutionlink { 
-    background-color: #ffae00; /*  colour palette */
+    background-color: #ffae00; 
 }
 .topnav.responsive {
     position: relative;
@@ -301,7 +301,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 .rightText h3 {
     text-align: right;
 }
-p.rightP {              /* SV 12-08 - override the widening, move the signatures to the right */
+p.rightP {              /* override the widening, move the signatures to the right */
     text-align: right;
 }
 .picBox { /* Sets the image width for the page at any resolution, but hides it for small screens */
@@ -319,7 +319,7 @@ p.rightP {              /* SV 12-08 - override the widening, move the signatures
     max-height: 200px;
     border-radius: 10px; 
 }
-.smallimage2 { /* JD 12-07 - Image styling for this specific section */
+.smallimage2 { /* Image styling for this specific section */
     float: left;
     border: 2px solid #555;
     max-width: 28vw;
@@ -343,12 +343,12 @@ p.rightP {              /* SV 12-08 - override the widening, move the signatures
 }
 
 .solutionImage{
-    display: block;
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 90%;
     height: 90%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
 }
 
