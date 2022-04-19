@@ -30,7 +30,7 @@
             <section>
                 <h2 class="projectTitle">GEOM99 Group Project</h2>
                 <article>
-                    <div class="ContentParagraph"><h3 class="underlineTitle"><a href="https://storymaps.arcgis.com/stories/4e084de88c7a46849df2601ae3f57111">StoryMaps</a></h3> 
+                    <div class="ContentParagraph"><h3 class="underlineTitle"><a href="https://storymaps.arcgis.com/stories/4e084de88c7a46849df2601ae3f57111">StoryMaps (Guided Tour)</a></h3> 
                         <p> The first solution we've produced to showcase the Vancouver Island trail system is an interactive Story Map
                             which discusses the southern part of the trail system from the Clover Point trail head to the Runners Trail head.
                             A total of 160 kilometres and 14 trail heads are displayed in this map, zooming into each head and describing the
@@ -38,14 +38,32 @@
                         </p>
                         <img class="solutionImage" src="images/StoryMap_Screenshots/StoryMaps2.PNG">
                     </div>
-                    <div class="ContentParagraph"><h3 class="underlineTitle"><a href="WebSceneArcgisJsApi.html">ArcGIS API for JavaScript</a></h3> 
-                        <p> The second solution that we've developed for this project is a map that uses ArcGIS API JavaScript to add further
-                            functionality to the StoryMap solution that was created and includes features such as measuring length using a 
-                            polyline, which can measure how long particular parts of the trail are or even the whole thing, change base maps to
-                            see the Island trail in another perspective, display location to see where users are at a given moment, and an
-                            expandable widget that has features like zoom in/out, a compass, and rotation.
-                        </p>
-                        <img class="solutionImage" src="images/ArcGIS API/ArcGISAPI1.PNG">
+                    <div class="ContentParagraph"><h3 class="underlineTitle"><a href="WebSceneArcgisJsApi.html">ArcGIS API for JavaScript (Self-Guided Tour)</a></h3> 
+                        <p> The second solution that we've developed for this project is a map that uses ArcGIS API for JavaScript to add more custom features. 
+                            This includes a legend, navigational controls (pan, rotate, zoom) in a 3D perspective, Changing Base Maps, Location Tracking, custom
+                            elevation profiles and expandable widgets for better interface viewing. This solution serves as a self-guided tour to compliment the
+                            StoryMap Guided Tour. Overviews of this interface are display below:</p>
+                        <p>Interface navigation:</p>
+                            <img class="solutionImage" src="images/ArcGIS API/APISolution1.JPG">
+                        <p>Expandable Widgets for Legend and Base Map Menu</p>
+                            <img class="solutionImage" src="images/ArcGIS API/APISolution2.jpg">
+                        <p>3D perspective exploration and the ability to see elevation profiles and other route details from an existing line feature that is Selected:</p>
+                            <img class="solutionImage" src="images/ArcGIS API/APISolution3.jpg">
+                        <p>3D perspective exploration and the ability to see elevation profiles and other route details from a new line feature that is Sketched by the user (see orange line below):</p>
+                            <img class="solutionImage" src="images/ArcGIS API/APISolution4.jpg">
+                        <p>Trail heads (with significant 3D symbol) with a simple pop-up including data from the trail head hosted feature layer:</p>
+                            <img class="solutionImage" src="images/ArcGIS API/APISolution5.jpg">
+                        <h4>Evaluation of addressing Problem Statement</h4>
+                        <p>This interactive web-map provides the user with general details of the Vancouver Island Trail. The ability for the user to explore in a 3D environment and with different base 
+                            maps gives the user a bird’s eye view experience of the trail which is helpful to acquire a good understanding of the general surroundings. More importantly, the elevation 
+                            profile feature provides even more details of the trail should they want to know more technical specifications such as elevation gain and length. All in all, a user is adequately 
+                            informed of the Vancouver Island Trail.  </p>
+                        <p>With that in mind, this application is ideally suited for prospective hikers who require a general understanding of the trail. Actual, on the ground-hikers planning a multi-day 
+                            hike can still find use in this application, especially with a location tracker feature and the mobile friendly interface. </p>
+                        <p>It is understood that more can be done to improve the effectiveness at informing the user. Firstly, expanding the functionality to include more trail data (such as trail difficulty 
+                            level, waypoints, points of interest, boundaries, etc) however that is contingent on the availability of data at the present. Otherwise, more can be done to make the application 
+                            more visually appealing and dynamic. Currently, it is full-page map with expandable widgets. Though, this is sufficient for keeping the interface clean, information / data is easier 
+                            to interpet when provided in an easy to read format. A future investment could be to find a resolution for custom Pop-ups which would help display tabulated data better.  </p>
                     </div>
                 </article>
    
