@@ -25,55 +25,60 @@
         <main>
             <section>
                 <h2 class="projectTitle">GEOM99 Group Project</h2>
+
+                <!-- Start of Topic Selection -->
                 <article class="ContentParagraph"><h3 class="underlineTitle1">Topic Selection</h3> 
-                        <p> Our project centers on the Vancouver Island Trail on Vancouver Island in British Columbia.  The trail is currently under construction
-                            and is being promoted and monitored by the Vancouver Island Trail Association (aka VITA for short).
-                            Some members of or group are working with VITA for their final collaborative work, and this project is a first blush of web map possibilities
-                            for the trail.
-                        </p>
-                <article class = "serve leftText">
-                    <div class="textZone">
-                        <h3> Initial Overview</h3>
-                        <p> VITA's website contains images of maps; there are no active interfaces for users and no capabilities for hikers to investigate sections of trails
-                        for possible hikes.  VITA2022 therefore decided to focus on providing interactive web maps.  As described below, our <a href ="#first">first thought</a> was 
-                        to do a web map with wildlife sightings and a link to weather forecasts. From there we proceeded to trying a <a href ="#second">second idea</a> and
-                        <a href ="#third">third iteration</a>.
-                        </p>
-                    </div>
-                    <figure class="picBox">
-                        <img src="images/Process images/ugly VIT map.jpg" alt="VIT map" class="smallimage">
-                    </figure> 
-                </article>
-                <article id = "first" class = "serve rightText">
-                    <div class="textZone">
+                    <p> Our project centers on the Vancouver Island Trail on Vancouver Island in British Columbia.  The trail is currently under construction
+                        and is being promoted and monitored by the Vancouver Island Trail Association (aka VITA for short).
+                        Some members of or group are working with VITA for their final collaborative work, and this project is a first blush of web map possibilities
+                        for the trail.</p>
+                    
+                    <article class = "serve leftText">
+                        <div class="textZone">
+                            <h3> Initial Overview</h3>
+                            <p> VITA's website contains images of maps; there are no active interfaces for users and no capabilities for hikers to investigate sections of trails
+                            for possible hikes.  VITA2022 therefore decided to focus on providing interactive web maps.  As described below, our <a href ="#first">first thought</a> was 
+                            to do a web map with wildlife sightings and a link to weather forecasts. From there we proceeded to trying a <a href ="#second">second idea</a> and
+                            <a href ="#third">third iteration</a>.
+                            </p>
+                        </div>
+                        <figure class="picBox">
+                            <img src="images/Process images/ugly VIT map.jpg" alt="VIT map" class="smallimage">
+                        </figure> 
+                    </article>
+
+                    <article id = "first" class = "serve rightText">
+                        <div class="textZone">
                         <h3>First Concept</h3>
                         <p>The initial concept floated was a web-based GIS solution incorporating open-source data for both wildlife sightings and weather 
-                             forecasts to make an informative and accessible web map of the Vancouver Island Trail.  A map, possibly derived from either 
+                            forecasts to make an informative and accessible web map of the Vancouver Island Trail.  A map, possibly derived from either 
                             Google Maps JavaScript API or Leaflet, would include pop-up information on geo-referenced wildlife sightings from
                             <a href = https://www.inaturalist.org/ > iNaturalist</a>, or possibly weather forecasts from <a href = https://openweathermap.org/ > OpenWeather Live</a>.
                             Base mapping data may also be sourced from <a href =https://www.openstreetmap.org/ > Open Street Maps</a>.<br>
                             Upon review of Google Maps, however, we realized the potential cost to our non-profit client would be prohibitive,
                             so our focus shifted to our <a href ="#second">second thought</a>, which was an alternative mapping option. 
                         </p>
-                    </div>
-                    <figure class="picBox">
-                        <img src="images/Process images/iNaturalist_logo.png" alt="iNaturlist logo" class="smallimage">
-                    </figure>
-                </article>
-                <article id = "second" class = "serve leftText">
-                    <div class="textZone">
+                        </div>
+                        <figure class="picBox">
+                            <img src="images/Process images/iNaturalist_logo.png" alt="iNaturlist logo" class="smallimage">
+                        </figure>
+                    </article>
+
+                    <article id = "second" class = "serve leftText">
+                        <div class="textZone">
                         <h3>Second Concept</h3>
                         <p> We focused on using either Esri Leaflet or MapBox for the base map, stored on an ArcGIS server.  
                             However,  it was pointed out to us that the project scope was too large and we were advised to pull 
                             back our ambitions.  This led us to our <a href ="#third">third iteration</a> as outlined below. 
                         </p>  
-                    </div>
-                    <figure class="picBox">
-                        <img src="images/Process images/Leaflet.jpg" alt="Leaflet logo" class="smallimage">
-                    </figure>
-                </article>
-                <article id = "third" class = "serve rightText">
-                    <div class = "textZone">
+                        </div>
+                        <figure class="picBox">
+                            <img src="images/Process images/Leaflet.jpg" alt="Leaflet logo" class="smallimage">
+                        </figure>
+                    </article>
+
+                    <article id = "third" class = "serve rightText">
+                        <div class = "textZone">
                         <h3>Third Concept</h3>
                         <p> The trail data was extracted from VITA's website in GPX format,  which was summarily brought into ArcGIS Pro and processed.  
                             A DEM was downloaded from the the federal government's GeoGratis portal as it had more complete elevation
@@ -83,13 +88,14 @@
                             to the AGOL server to give users a guided tour of the south section of the trail. But the team was not satisfied with only one possible 
                             solution.  This led us to our <a href ="#fourth">fourth iteration</a>, another Esri product. 
                         </p>  
-                    </div>  
-                    <figure class="picBox">
-                        <img src="images/Process images/Storymap.jpg" alt="Our Storymap" class="smallimage">
-                    </figure>
-                </article>
-                <article id = "fourth" class = "serve leftText">
-                    <div class = "textZone">
+                        </div>  
+                        <figure class="picBox">
+                            <img src="images/Process images/Storymap.jpg" alt="Our Storymap" class="smallimage">
+                        </figure>
+                    </article>
+
+                    <article id = "fourth" class = "serve leftText">
+                        <div class = "textZone">
                         <h3>Fourth Concept</h3>
                         <p> A second web-based map was created using ArcGIS API for JavaScript; this was also published to 
                             AGOL.  This map allows users to carry out self-guided tours of the south sections of the trail. Numerous widgets were added:
@@ -100,13 +106,15 @@
                             <li> ability to track the user's location</li>  
                             <li> ability to create custom trail profiles</li>  
                         </p>  
-                    </div>  
-                    <figure class="picBox">
-                        <img src="images/Process images/API.jpg" alt=" API map" class="smallimage">
-                    </figure>         
+                        </div>  
+                        <figure class="picBox">
+                            <img src="images/Process images/API.jpg" alt=" API map" class="smallimage">
+                        </figure>         
+                    </article>
                 </article>
-                    
-                    </div>
+
+                <!-- Start of Exploring Technologies -->
+                <article>    
                     <div class="ContentParagraph"><h3 class="underlineTitle">Exploring Technologies and Scope Changes</h3> 
                         <p> The web interface portion of this project will contain all the background information and showcasing the Story Map
                             that we've made in the following three sections. Firstly, a home page/landing page that discusses the purpose of the
@@ -115,7 +123,11 @@
                             conclude this project.
                         </p>
                     </div>
-                    <div class="ContentParagraph"><h3 class="underlineTitle">Gathering and Processing Data</h3> 
+                </article>
+                
+                <!-- Start of Data Acquisition -->
+                <article> 
+                    <div class="ContentParagraph"><h3 class="underlineTitle">Data Acquisition, Processing and Publishing</h3> 
                         <p> Trail Data >> GPX conversion >> Geojson >> publish as hosted feature layer</p>
                         <p> Trail Guide Book trail head data >>Tabulating relevant and complete trail segments in CSV >> publish as hosted feature layer</p> 
                         <p> Create Initial webmap with geojson trail segments as polyline layer and trailheads as point layer</p>        
