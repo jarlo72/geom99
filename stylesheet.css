@@ -47,7 +47,7 @@ header {
     background-image: url("images/hiking2.jpg"); /* Source: https://unsplash.com/photos/YodH2WzN6YU */
     height: 30vw;
     background-size: cover;
-    background-position: 50% 30%;
+    background-position: 50% 70%;
     background-repeat: no-repeat; /* background image and details added for header graphic */
     padding:15px;
     font-size: 4em;

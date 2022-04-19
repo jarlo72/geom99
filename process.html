@@ -124,14 +124,46 @@
                         </p>
                     </div>
                 </article>
-                
+
                 <!-- Start of Data Acquisition -->
                 <article> 
-                    <div class="ContentParagraph"><h3 class="underlineTitle">Data Acquisition, Processing and Publishing</h3> 
-                        <p> Trail Data >> GPX conversion >> Geojson >> publish as hosted feature layer</p>
-                        <p> Trail Guide Book trail head data >>Tabulating relevant and complete trail segments in CSV >> publish as hosted feature layer</p> 
-                        <p> Create Initial webmap with geojson trail segments as polyline layer and trailheads as point layer</p>        
+                    <div class="ContentParagraph">
+                        <h3 class="underlineTitle">Data Acquisition, Processing and Publishing</h3> 
+                        <p> This segment in our methodology covers the process of acquiring the raw data to establishing our ArcGIS Online Web-map.</p>
+                        <h4>Examining the Data</h4>
+                        <p> Our data acquisition was made simple as most, if not all, of our trail data was available from our collaborative project client’s 
+                            (VITA) website <a href = "https://vi-trail.ca/">https://vi-trail.ca/</a>. This included the trail tracts and the trailhead data from their trail maps 
+                            and guidebook respectively. The Trail Tracts (polyline) and Trail head (points) would serve as the primary operational layers in this application</p> 
+                        <p> Upon exploration of VITA’s resources, it was discovered that trail tract data became increasingly sparse / unavailable towards the northern 
+                            portion of the trail. The availability of this data dictated the geographic scope of our trail map, hence, the necessary scope change from earlier. 
+                            Thus, it was decided to only include the consistent southern portion of the Vancouver Island trail in our trail map, from Point Clover in Victoria, 
+                            BC to Port Alberni. </p> 
+                        <h4>Trail Tract Data</h4>
+                        <figure class="picBox">
+                            <img src="images/Process images/geoJSON_io2.JPG" alt=" GeoJSON Map">
+                        </figure> 
+                        <p>Firstly, the trail tracts (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
+                            These GPX files were converted into a GeoJSON file using <a href = "https://geojson.io/#map=2/20.0/0.0">geojson.io</a>. This GeoJSON file would be 
+                            published into ArcGIS Online as a hosted feature layer.</p>
+                        <h4>Trail head Data</h4>
+                        <p>Secondly, the trail head data was needed in the form of point features. This was trickier since trail heads were not originally in digital format 
+                            but in coordinate (latitude / longitude) descriptions in the trail guide-book. Similar to the trail tract data, trail head data became increasingly 
+                            sparse and inconsistent towards the northern portions and thus, for consistency and completeness, resorted to using only the southern trail heads from 
+                            Point Clover to Port Alberni. These trail heads aligned with the trail tract data, however with a discrepancy that 14 trail head points were acquired in 
+                            contrast to the 7 trail tracts/ segments acquired earlier. It was found that the 7 trail segments used the same trail heads to define the start-end of 
+                            the segment just at a different frequency. Thus, the trail head and trail tract data are valid.  Forming trailhead data in csv from trail guide-book and 
+                            publishing as hosted feature layer</p>
+                        <p>A CSV file was drafted to store and tabulate the trail head latitude and longitude coordinates. In this table, trail head start and end names and length were included. 
+                            This CSV file would then be published onto ArcGIS Online as a hosted feature layer, with the lat/long coordinates representing the point feature. </p>
+                        <h4>Initial Base Map</h4>
+                        <p>With the trail tracts (polyline features) and trail head (point) features, an initial web map was created with appropriate symbology set up to emphasize the trail data: 
+                            <a href="https://fleming.maps.arcgis.com/apps/mapviewer/index.html?webmap=46df05449e524dc0993b114f96eaa12c">Vancouver Island Trail Map</a>. This web-map would serve as 
+                            the basis to upon other configurable solutions may be built upon.</p>     
                     </div>
+                </article>
+
+                <!-- Start of Story Maps -->
+                <article> 
                     <div class="ContentParagraph"><h3 class="underlineTitle">Creating a StoryMaps Map</h3> 
                         <p> For our first web configurable we created an ArcGIS StoryMaps to produce a web solution from our problem statement. ArcGIS StoryMaps is a story authoring web-based application that allows developers to create a narrative using maps, text, and other multimedia content. Given that the Vancouver Island Trail is not yet fully complete, we thought StoryMaps would be a great way for potential recreators to explore the developed sections of the trail through a guided map tour.
                         </p>
@@ -155,9 +187,12 @@
                         </p>
                         <p>In our final review of our created StoryMaps, there were some technical limitations with the configurable tool that did not cover our vision for a web application for the Vancouver Island Trail. We needed to create an additional solution that was more customizable, that would allow a user to explore the area through a self-guided tour and query from the web map.  
                         </p>
-
                     </div>
-                    <div class="ContentParagraph"><h3 class="underlineTitle">Creating an ArcGIS JavaScript API Map</h3> 
+                </article>
+
+                <!-- Start of API Map -->
+                <article> 
+                    <div class="ContentParagraph"><h3 class="underlineTitle">Creating an ArcGIS API for JavaScript Map</h3> 
                         <p> The process that was involved for creating a Web Scene Map using ArcGIS API for JavaScript was adding additional interactivity
                             that cannot be achieved through the StoryMaps Map itself. 
                         </p>                
