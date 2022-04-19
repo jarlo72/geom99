@@ -263,8 +263,8 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 /* --------------------------------------- Methodology Page Styling ------------------------- */ 
 .ContentParagraph1 { /* styling for initial paragraph on this page */
-    padding-top:10px;
-    padding-bottom:5px;
+    padding-top:2px;
+    padding-bottom:2px;
 }
 .underlineTitle1 { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
     border-bottom: 1px solid #b8b2cf;
@@ -308,23 +308,27 @@ p.rightP {              /* override the widening, move the signatures to the rig
     width: 30vw;
 }
 .picSet {               /* Setting the image max-sizing, which also controls the article size on large screens, and rounds the corners*/
-    max-width: 28vw;
+    max-width: 25vw;
     max-height: 300px;
     border-radius: 10px;
 }
-.smallimage { /*  Setting the image max-sizing, which also controls the article size on large screens, and rounds the corners */
+.smallimageright { /*  Setting the image max-sizing, which also controls the article size on large screens, and rounds the corners */
     float: right;
-    border: 1px solid #555; 
+    border: 2px solid #555; 
     max-width: 28vw;
     max-height: 200px;
     border-radius: 10px; 
+    padding: 2px;
+    margin: 10px;
 }
-.smallimage2 { /* Image styling for this specific section */
+.smallimageleft { /* Image styling for this specific section */
     float: left;
     border: 2px solid #555;
     max-width: 28vw;
     max-height: 200px;
     border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 /* --------------------------------------- Solution Page Styling ------------------------- */ 
 
