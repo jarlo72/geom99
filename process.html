@@ -4,14 +4,14 @@
         <!-- https://jarlo72.github.io/web1/process.html will change once imported to Luna -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make it responsive--> 
         <meta charset="UTF-8">
-        <title>VITA 2022 Processes</title>
+        <title>VITA 2022 Methodology</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="icon" href="images/logo_v2.png"> <!--Reference: https://www.delftstack.com/howto/html/html-tab-icon/-->
     </head>
     <body>
         <nav class="topnav" id="myTopnav">
             <a href="index.html">Home</a> 
-            <a class="active" href="process.html">Methodology and Processes</a> 
+            <a class="active" href="process.html">Methodology and Process</a> 
             <a href="solution.html">Solution</a>
             <a class ="solutionlink" href="WebSceneArcgisJsApi.html" target="_blank">Self-Guided Tour</a>
             <a class ="solutionlink" href="https://storymaps.arcgis.com/stories/4e084de88c7a46849df2601ae3f57111" target="_blank">Guided Tour</a>
@@ -24,10 +24,10 @@
         </header> 
         <main>
             <section>
-                <h2 class="projectTitle">GEOM99 Group Project</h2>
+                <h2 class="projectTitle">Trail Map Development Process</h2>
 
                 <!-- Start of Topic Selection -->
-                <article class="ContentParagraph1"><h3 class="underlineTitle1">Topic Selection</h3> 
+                <article class="ContentParagraph"><h3 class="underlineTitle">Topic Selection</h3> 
                     <p> Our project centers on the Vancouver Island Trail on Vancouver Island in British Columbia.  The trail is currently under construction
                         and is being promoted and monitored by the Vancouver Island Trail Association (VITA).
                         Some members of our group are working with VITA for their final collaborative work, and this project is the first blush of web map possibilities
@@ -36,7 +36,7 @@
                     
                     <article class = "serve leftText">
                         <div class="textZone">
-                            <h5> Initial Overview</h5>
+                            <h4> Initial Overview</h4>
                             <p> VITA's website contains only PDF images of maps; there are no active interfaces for users and no capabilities for hikers to investigate sections of trails
                                 for possible hikes. Our group, VITA2022, therefore decided to focus on providing one or more options for an interactive web map solution. As described below, we explored several ideas for integrating
                                 various features into the interactive web map. 
@@ -49,7 +49,7 @@
 
                     <article class = "serve rightText">
                         <div class="textZone">
-                        <h5>Possible Features Within Map</h5>
+                        <h4>Possible Features Within Map</h4>
                         <p>The initial concept floated was a web-based GIS solution incorporating open-source data for wildlife sightings and weather 
                             forecasts to make an informative and accessible web map of the Vancouver Island Trail. A map, possibly derived from either 
                             Google Maps JavaScript API or Leaflet would include pop-up information on geo-referenced wildlife sightings from
@@ -67,56 +67,52 @@
                     </article>
 
                     <!-- Start of Exploring Technologies -->
-                    <article class="ContentParagraph1"><h3 class="underlineTitle1">Exploring Technologies and Scope Changes</h3> 
+                    <article class="ContentParagraph"><h3 class="underlineTitle">Exploring Technologies and Scope Changes</h3> 
                         <p> The map is key to the project and the team spent considerable time researching all possible map alternatives.</p>
-
-                    <article class = "serve leftText">
-                        <div class="textZone">
-                        <h5>Exploring Technologies for Map</h5>
-                        <p> Team members researched additional alternative map solutions and explored online tutorials for Experience Builder, Geocortex, 
-                            Leaflet, Mapbox, and StoryMaps.  Experience Builder can portray a map, but its real power is to showcase data analysis and statistics. Those functions were not
-                            the focus of this project, so Experience Builder was discarded. Team member experience with Geocortex and review of past Fleming College projects revealed that Geocortex
-                            is not a reliable tool to use, so it too was put aside. Ultimately, we opted to center on using either Esri Leaflet, StoryMaps, or Mapbox for the base map 
-                            stored on an ArcGIS server. Since our client is a non-profit agency, we proposed to narrow our focus even more to use well-documented open source solutions.  
-                            However, at a meeting with our professor, we were directed to focus showcasing our map within <a href="https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview" target="_blank">StoryMaps.</a>
-                        </p>  
-                        </div>
-                        <figure class="picBox">
-                            <img src="images/Process_images/Leaflet.jpg" alt="Leaflet logo" class="smallimageright">
-                        </figure>
-                    </article>
-
-                    <article class = "serve rightText">
-                        <div class = "textZone">
-                        <h5>Trail Map Using Open-Source Esri Technologies</h5>
-                        <p> After the initial meeting with our professor about our direction using Esri Leaflet, StoryMaps, or Mapbox, we were directed towards specifically open-source Esri solutions.
-                            Taking into consideration, our already-proof working StoryMap that we've used initially before the scope change, we continued to develop the map and add more functionality.
-                            For the hosting data portion of the project, we continued to use <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank">ArcGIS Online (AGOL)</a> for contribution purposes and storage of map feature layers, the StoryMaps map, and other miscellaneous
-                            items for use in our project. Another component of the project that we decided to implement after a second touch base with our professor was the use of <a href="https://developers.arcgis.com/javascript/latest/" target="_blank">ArcGIS API for JavaScript.</a>
-                            This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" tour, showcasing the different sections and trail heads 
-                            throughout the trail system. In response to this, we decided to make an interactive "self-guided" version of our proposed map that allows the user to zoom in/out, see elevation profiles
-                            of different sections of the trail, select between different base maps to extract more context out of the map, showcase their location using the location service, and have a glance
-                            at the different trail sections by viewing the legend. 
-                        </p>  
-                        </div>  
-                        <figure class="picBox">
-                            <img src="images/Process_images/Storymap.jpg" alt="Our StoryMap" class="smallimageleft">
-                        </figure>
-                    </article>
-
-                    <article class = "serve leftText">
-                        <div class = "textZone">
-                        <h5>Sharing and contribution via ArcGIS Online (AGOL)</h5>
-                        <p> Early on in the project, we had discussed and explored how and where our data for our trail maps will be stored. Based on that conversation along with a meeting with our professor on
-                            the matter, we decided to store, use and contribute to AGOL. To execute this, we created a shared update group with a folder repository of our project items on AGOL. Once the shared group and folder repository was established, data found
-                            on VITA’s website and other additional data needed were brought into the AGOL folder environment which we used to make the StoryMaps and store it along with the trail data for the ArcGIS
-                            API for JavaScript map.
-                        </p>  
-                        </div>  
-                        <figure class="picBox">
-                            <img src="images/Process_images/API.jpg" alt=" API map" class="smallimageright">
-                        </figure>         
-                    </article>
+                        <article class = "serve leftText">
+                            <div class="textZone">
+                            <h4>Exploring Technologies for Map</h4>
+                            <p> Team members researched additional alternative map solutions and explored online tutorials for Experience Builder, Geocortex, 
+                                Leaflet, Mapbox, and StoryMaps.  Experience Builder can portray a map, but its real power is to showcase data analysis and statistics. Those functions were not
+                                the focus of this project, so Experience Builder was discarded. Team member experience with Geocortex and review of past Fleming College projects revealed that Geocortex
+                                is not a reliable tool to use, so it too was put aside. Ultimately, we opted to center on using either Esri Leaflet, StoryMaps, or Mapbox for the base map 
+                                stored on an ArcGIS server. Since our client is a non-profit agency, we proposed to narrow our focus even more to use well-documented open source solutions.  
+                            </p>  
+                            </div>
+                            <figure class="picBox">
+                                <img src="images/Process_images/Leaflet.jpg" alt="Leaflet logo" class="smallimageright">
+                            </figure>
+                        </article>
+                        <article class = "serve rightText">
+                            <div class = "textZone">
+                            <h4>Trail Map Using Open-Source Esri Technologies</h4>
+                            <p> After the initial meeting with our professor about our direction using Esri Leaflet, StoryMaps, or Mapbox, we were directed towards specifically open-source Esri solutions.
+                                Taking into consideration, our already-proof working StoryMap that we've used initially before the scope change, we continued to develop the map and add more functionality.
+                                For the hosting data portion of the project, we continued to use <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank">ArcGIS Online (AGOL)</a> for contribution purposes and storage of map feature layers, the StoryMaps map, and other miscellaneous
+                                items for use in our project. Another component of the project that we decided to implement after a second touch base with our professor was the use of <a href="https://developers.arcgis.com/javascript/latest/" target="_blank">ArcGIS API for JavaScript.</a>
+                                This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" tour, showcasing the different sections and trail heads 
+                                throughout the trail system. In response to this, we decided to make an interactive "self-guided" version of our proposed map that allows the user to zoom in/out, see elevation profiles
+                                of different sections of the trail, select between different base maps to extract more context out of the map, showcase their location using the location service, and have a glance
+                                at the different trail sections by viewing the legend. 
+                            </p>  
+                            </div>  
+                            <figure class="picBox">
+                                <img src="images/Process_images/Storymap.jpg" alt="Our StoryMap" class="smallimageleft">
+                            </figure>
+                        </article>
+                        <article class = "serve leftText">
+                            <div class = "textZone">
+                            <h4>Sharing and contribution via ArcGIS Online (AGOL)</h4>
+                            <p> Early on in the project, we had discussed and explored how and where our data for our trail maps will be stored. Based on that conversation along with a meeting with our professor on
+                                the matter, we decided to store, use and contribute to AGOL. To execute this, we created a shared update group with a folder repository of our project items on AGOL. Once the shared group and folder repository was established, data found
+                                on VITA’s website and other additional data needed were brought into the AGOL folder environment which we used to make the StoryMaps and store it along with the trail data for the ArcGIS
+                                API for JavaScript map.
+                            </p>  
+                            </div>  
+                            <figure class="picBox">
+                                <img src="images/Process_images/API.jpg" alt=" API map" class="smallimageright">
+                            </figure>         
+                        </article>
                 </article>
 
                 <!-- Start of Data Acquisition -->
@@ -132,11 +128,11 @@
                             portion of the trail. The availability of this data dictated the geographic scope of our trail map; hence, the necessary scope change from earlier. 
                             Thus, it was decided to only include the consistent southern portion of the Vancouver Island trail in our trail map, from Point Clover in Victoria, 
                             BC to Port Alberni.</p> 
-                        <h4>Trail Tract Data</h4>
-                        <img class="solutionImage" src="images/Process_images/geoJSON_io2.JPG" alt="GeoJSON Map">
-                        <p> Firstly, the trail tracts (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
+                        <h4>Trail Track Data</h4>
+                        <p> Firstly, the trail tracks (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
                             These GPX files were converted into a GeoJSON file using <a href="https://geojson.io/#map=2/20.0/0.0">geojson.io</a>. This GeoJSON file would be 
                             published into ArcGIS Online as a hosted feature layer.</p>
+                            <img class="solutionImage" src="images/Process_images/geoJSON_io2.JPG" alt="GeoJSON Map">
                         <h4>Trailhead Data</h4>
                         <p> Secondly, the trailhead data was needed in the form of point features. This was trickier since trailheads were not originally in digital format 
                             but in coordinate (latitude/longitude) descriptions in the trail guide book. Similar to the trail track data, trailhead data became increasingly 
@@ -261,7 +257,7 @@
         </main>
         
         <footer> 
-            <p class="footernotes">VITA2022 Inc. All Rights Reserved. Any VITA2022 products are Trademarks owned by SpiderWeb Group in GEOM99 Web Design.</p>
+            <p class="footernotes">VITA2022 Inc. All Rights Reserved. Any VITA2022 products are Trademarks owned by SpiderWeb Group in GEOM99 Web GIS Development.</p>
             <p class="footernotes">Email: <a class=deadlink>infoinquest@VITA2022.ca</a> | Phone: <a class=deadlink>(416) 888-8888</a> | <a class=deadlink>Terms of Use</a> | <a class=deadlink>Privacy Statement</a> | <a class=deadlink>Accessibility</a></p>
         </footer>
     </body>

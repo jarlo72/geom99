@@ -26,22 +26,19 @@ h2 {
 h3 { 
     float: none;
     font-size: 18pt;
-    padding: 15px;
 }
 h4 {
     font-size: 16pt;
-    padding: 15px;
+    padding-top:15px;
 }
 h5 { 
     font-size: 13pt;
-    padding: 15px;
 }
 p { 
     font-size: 12pt;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: justify;
 }
 body {
     background-color: #ffffff;
@@ -145,10 +142,10 @@ main { /*  sets up flexbox, to simplify positioning of everything. */
 
 section { /* aligns subsequent sections to the column format consistent with main */
     margin: 1vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
     order: 1;
-    flex: 80vw;
+    flex: 10vw;
     display: flex;
     flex-direction: column;
 }
@@ -157,17 +154,28 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     background-color: #1f3021;
     color: #cecece;
 	border-top: 1px solid gray;
-	text-align: center;
 	padding: 2vw;
 	position: static;
     bottom: 0;
+    margin-top:20px;
 }
 
 .footernotes {
     font-size: 10pt;
+    text-align: center;
 }
+
+/* --------------------------------------- General Styling ------------------------- */
+
+
+.underlineTitle { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
+    color: #000000;
+    border-bottom: 1px solid #b8b2cf;
+    text-align: center;
+    padding-top: 15px;
+}
+
 .deadlink { 
-    color: #cecece;
 	text-decoration:none;
 }    
 .deadlink:hover { 
@@ -175,24 +183,10 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     cursor:pointer;
 } 
 
-/* --------------------------------------- General Styling ------------------------- */
-
 /* DEAD TEXT */
 .quote{ /* Quotation styling */
-    padding: 25px;
-    color: rgb(0, 0, 0);
     text-align: center;
     font-style: italic;
-    font-weight: bold;
-    font-size: 1.25em;
-}
-
-.underlineTitle { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
-    border-bottom: 1px solid #b8b2cf;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 20px;
-
 }
 
 .ContentParagraph { /* JD 12-07 -  styling for paragraphs explaining content */
@@ -224,9 +218,6 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin: .5vw;
 
 }
-.justify { 
-    text-align: justify;
-}
 
 .profiles { /*sets images to greyscale for bios */
     filter: grayscale(100%);
@@ -245,26 +236,13 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 }
 
 .role {
-    font-size: 10pt;
+    font-size: 12pt;
     font-style: italic;
     padding: 5px;
 }
 
 /* --------------------------------------- Methodology Page Styling ------------------------- */ 
-.ContentParagraph1 { /* styling for initial paragraph on this page */
-    padding-top:2px;
-    padding-bottom:2px;
-}
-.underlineTitle1 { /* underlining titles (h3) for visual appeal and organization. could be used for titles in other pages */
-    border-bottom: 1px solid #b8b2cf;
-    margin-bottom: 5px;
-    text-align: center;
-    padding: 5px;
-}
-.ContentArticle { /* styling for paragraphs explaining articles */
-    padding-top:2px;
-    padding-bottom:2px;
-}
+
 .serve {                /* Sets the aside so that the text will centre on the image, or vise-versa depending on screen size */
     display: flex;      /* Also establishes the container to flexbox for future formatting */
     height: max-content;
@@ -319,10 +297,18 @@ p.rightP {              /* override the widening, move the signatures to the rig
 }
 /* --------------------------------------- Solution Page Styling ------------------------- */ 
 
+.solutionImage{
+    display: block;
+    margin-bottom: 3%;
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
 
 @media screen and (min-width: 800px) {
     /* ---------- About Us styling for Landing page ---------- */
-        .bio { 
+    .bio { 
         width: 20vw;
     }
     .profiles { 
@@ -332,26 +318,3 @@ p.rightP {              /* override the widening, move the signatures to the rig
         filter: none;
     }
 }
-
-.solutionImage{
-    display: block;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width: 85%;
-    height: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-}
-
-/* --------------------------------------- ArcGIS API for JavaScript Page ------------------------- */ 
-
-/* ----- Measurement box style ------ */
-#measurements {
-    padding: 4px 8px;
-    font-size: 16px;
-    bottom: 15px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%,-50%);
-  }
