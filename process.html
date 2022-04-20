@@ -92,7 +92,7 @@
                             Taken it into consideration, our already proof working StoryMap that we've used initially before the scope change, we continued to develop the map and add more functionality.
                             For the hosting data portion of the project, we continued to use ArcGIS Online (AGOL) for contribution purposes and storage of map feature layers, the StoryMaps map, and other miscellaneous
                             items for use in our project. Another component of the project that we decided to implement after a second touchbase with our professor was the use of ArcGIS API for JavaScript.
-                            This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" like tour, showcasing the different sections and trail heads 
+                            This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" like tour, showcasing the different sections and trailheads 
                             throughout the trail system. In response to this, we decided to make an interactive "self-guided" version of our proposed map that allows the user to zoom in/out, see elevation profiles
                             of different sections of the trail, select between different basemaps to extract more context out of the map, showcase their location using the location service, and have a quick glance
                             at the different trail sections by viewing the legend. 
@@ -125,29 +125,29 @@
                         <p> This segment in our methodology covers the process of acquiring the raw data to establishing our ArcGIS Online Web-map.</p>
                         <h4>Examining the Data</h4>
                         <p> Our data acquisition was made simple as most, if not all, of our trail data was available from our collaborative project client’s 
-                            (VITA) website <a href = "https://vi-trail.ca/">https://vi-trail.ca/</a>. This included the trail tracts and the trailhead data from their trail maps 
-                            and guidebook respectively. The Trail Tracts (polyline) and Trail head (points) would serve as the primary operational layers in this application</p> 
-                        <p> Upon exploration of VITA’s resources, it was discovered that trail tract data became increasingly sparse / unavailable towards the northern 
+                            (VITA) website <a href = "https://vi-trail.ca/">https://vi-trail.ca/</a>. This included the trail tracks and the trailhead data from their trail maps 
+                            and guidebook respectively. The trail tracks (polyline) and trailhead (points) would serve as the primary operational layers in this application</p> 
+                        <p> Upon exploration of VITA’s resources, it was discovered that trail track data became increasingly sparse / unavailable towards the northern 
                             portion of the trail. The availability of this data dictated the geographic scope of our trail map, hence, the necessary scope change from earlier. 
                             Thus, it was decided to only include the consistent southern portion of the Vancouver Island trail in our trail map, from Point Clover in Victoria, 
                             BC to Port Alberni. </p> 
-                        <h4>Trail Tract Data</h4>
+                        <h4>Trail Track Data</h4>
                         <img class="solutionImage" src="images/Process images/geoJSON_io2.JPG" alt=" GeoJSON Map">
-                        <p>Firstly, the trail tracts (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
+                        <p>Firstly, the trail tracks (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
                             These GPX files were converted into a GeoJSON file using <a href = "https://geojson.io/#map=2/20.0/0.0">geojson.io</a>. This GeoJSON file would be 
                             published into ArcGIS Online as a hosted feature layer.</p>
-                        <h4>Trail head Data</h4>
-                        <p>Secondly, the trail head data was needed in the form of point features. This was trickier since trail heads were not originally in digital format 
-                            but in coordinate (latitude / longitude) descriptions in the trail guide-book. Similar to the trail tract data, trail head data became increasingly 
-                            sparse and inconsistent towards the northern portions and thus, for consistency and completeness, resorted to using only the southern trail heads from 
-                            Point Clover to Port Alberni. These trail heads aligned with the trail tract data, however with a discrepancy that 14 trail head points were acquired in 
-                            contrast to the 7 trail tracts/ segments acquired earlier. It was found that the 7 trail segments used the same trail heads to define the start-end of 
-                            the segment just at a different frequency. Thus, the trail head and trail tract data are valid.  Forming trailhead data in csv from trail guide-book and 
+                        <h4>Trailhead Data</h4>
+                        <p>Secondly, the trailhead data was needed in the form of point features. This was trickier since trailheads were not originally in digital format 
+                            but in coordinate (latitude / longitude) descriptions in the trail guide-book. Similar to the trail track data, trailhead data became increasingly 
+                            sparse and inconsistent towards the northern portions and thus, for consistency and completeness, resorted to using only the southern trailheads from 
+                            Point Clover to Port Alberni. These trailheads aligned with the trail track data, however with a discrepancy that 14 trailhead points were acquired in 
+                            contrast to the 7 trail tracks/ segments acquired earlier. It was found that the 7 trail segments used the same trailheads to define the start-end of 
+                            the segment just at a different frequency. Thus, the trailhead and trail track data are valid.  Forming trailhead data in csv from trail guide-book and 
                             publishing as hosted feature layer</p>
-                        <p>A CSV file was drafted to store and tabulate the trail head latitude and longitude coordinates. In this table, trail head start and end names and length were included. 
+                        <p>A CSV file was drafted to store and tabulate the trailhead latitude and longitude coordinates. In this table, trailhead start and end names and length were included. 
                             This CSV file would then be published onto ArcGIS Online as a hosted feature layer, with the lat/long coordinates representing the point feature. </p>
                         <h4>Initial Base Map</h4>
-                        <p>With the trail tracts (polyline features) and trail head (point) features, an initial web map was created with appropriate symbology set up to emphasize the trail data: 
+                        <p>With the trail tracks (polyline features) and trailhead (point) features, an initial web map was created with appropriate symbology set up to emphasize the trail data: 
                             <a href="https://fleming.maps.arcgis.com/apps/mapviewer/index.html?webmap=46df05449e524dc0993b114f96eaa12c">Vancouver Island Trail Map</a>. This web-map would serve as 
                             the basis to upon other configurable solutions may be built upon.</p> 
                         <img class="solutionImage" src="images/Process images/AGOL_basemap2.jpg" alt=" GeoJSON Map">  
@@ -156,7 +156,8 @@
 
                 <!-- Start of Story Maps -->
                 <article> 
-                    <div class="ContentParagraph"><h3 class="underlineTitle">Creating a StoryMaps Map</h3> 
+                    <div class="ContentParagraph"><h3 class="underlineTitle">Creating a StoryMaps Map</h3>
+                        <h4>Lead-Up</h4> 
                         <p> For our first web configurable we created an ArcGIS StoryMaps to produce a web solution from our problem statement. ArcGIS StoryMaps is a story authoring web-based 
                             application that allows developers to create a narrative using maps, text, and other multimedia content. Given that the Vancouver Island Trail is not yet fully 
                             complete, we thought StoryMaps would be a great way for potential recreators to explore the developed sections of the trail through a guided map tour.
@@ -171,29 +172,29 @@
                             and non-data driven approach to decide which style of Map Tour was best suited the project’s goals.    
                         </p>
                         <h5>Data Driven Approach</h5>
-                        <p>We first selected the data-driven approach which allowed us to upload exact trail head point data into the StoryMaps from our AGOL account as the stopping points 
+                        <p>We first selected the data-driven approach which allowed us to upload exact trailhead point data into the StoryMaps from our AGOL account as the stopping points 
                             along the Map Tour. This approach automatically created the stopping points for the Map Tour and drew trail names from each of the point features. The side panel 
-                            for each tour stop or trail head was auto populated with the trail name from the trail head point feature class. Where the side panel was driven by the trail head 
-                            feature class it was not mutable in StoryMaps, and only contained the trail head name. Our team also adjusted the view of the map for each stop to adjust the zoom 
+                            for each tour stop or trailhead was auto populated with the trail name from the trailhead point feature class. Where the side panel was driven by the trailhead 
+                            feature class it was not mutable in StoryMaps, and only contained the trailhead name. Our team also adjusted the view of the map for each stop to adjust the zoom 
                             level. Using a data driven approach, only 2D map visualizations were available.
                         </p>
                         <h5>Non-Data Driven Approach</h5>
-                        <p>As an alternative approach, we explored creating a Map Tour using a non-data driven approach, where trail heads were added on the map manually. Our team added trail 
-                            heads on the map to correspond to the base map which had trail head point features and trail polylines visualized. Where trail heads were placed manually, the side 
-                            panels were not auto populated with data and our team was able to add in photos, trail head names, and trail descriptions in the side panel. Our team also adjusted 
+                        <p>As an alternative approach, we explored creating a Map Tour using a non-data driven approach, where trailheads were added on the map manually. Our team added trail 
+                            heads on the map to correspond to the base map which had trailhead point features and trail polylines visualized. Where trailheads were placed manually, the side 
+                            panels were not auto populated with data and our team was able to add in photos, trailhead names, and trail descriptions in the side panel. Our team also adjusted 
                             the view of the map for each stop to adjust zoom level and 3D perspective by adjusting the aspect.
                         </p>
-                        <h4>Discussion on shortfalls, limitations or what went wrong</h4>
+                        <h4>Discussion on Shortfalls, Limitations or What Went Wrong</h4>
                         <p>Based on our exploration of creating a Map Tour in our StoryMaps, our team decided to use the non-data driven approach to create a guided tour of the Vancouver Island 
-                            Trail. Although the data-driven approach secured the most accurate locations for trail heads, it autogenerated the Map Tour from the trail head feature layer data 
-                            exclusively, creating stops at each trail head in the trail head feature layer. The auto generation of the tour extended to the descriptive side panels for each trail 
+                            Trail. Although the data-driven approach secured the most accurate locations for trailheads, it autogenerated the Map Tour from the trailhead feature layer data 
+                            exclusively, creating stops at each trailhead in the trailhead feature layer. The auto generation of the tour extended to the descriptive side panels for each trail 
                             head or tour stop as well. Where the side panels were autogenerated using a data-driven approach, we could not add in trail photos, trail profile graphs, and include 
                             trail descriptions into the panel while using StoryMaps. While using a non-data driven approach, each stop and associated description side panel was created manually 
                             which allowed us to add in trail names, elevation profiles, trail descriptions, and photos. 
                         </p>
                         <p>The data driven approach also did not allow us to create a 3D perspective of the trail. Given the diverse topography of the area, we wanted to highlight elevation ranges 
                             using a 3D perspective of the trail system. The data driven approach only accepted point features as stops, and in between each trailhead stop the pan to the next trailhead 
-                            was linear and fast, resulting in the tour not visualizing the trail for the user well but just the trail head. Using a non-data driven with trailheads as stops, we were able 
+                            was linear and fast, resulting in the tour not visualizing the trail for the user well but just the trailhead. Using a non-data driven with trailheads as stops, we were able 
                             to adjust the 2D scene into a 3D scene and change the perspective of the map by adjusting the aspect to influence the pan between stops to show the trail section. With the 
                             capabilities of a 3D scene, we angled the perspective, so that the view at any time in the tour was from one trailhead to the next. When moving onto the next trailhead, the 
                             map panned with the direction of the trail allowing the user to observe the trail. 
@@ -224,14 +225,14 @@
                         <h4>Process</h4>
                         <p>The approach to the development of a web-map using ArcGIS API for JavaScript was using the tutorials and documentation to explore and implement which features were relevant to a trail map. 
                             We would use the sample codes provided in the documentation to start off and adapt it accordingly. </p>    
-                        <p>The basis of this interactive web-map would be a 3D perspective of the trail and its surroundings which the user may pan over. To do that, a web-scene was created from the trail tract and 
-                            trail head feature layers, and symbolized appropriately, as was done for the initial web-map. </p>
+                        <p>The basis of this interactive web-map would be a 3D perspective of the trail and its surroundings which the user may pan over. To do that, a web-scene was created from the trail track and 
+                            trailhead feature layers, and symbolized appropriately, as was done for the initial web-map. </p>
                         <p>From that, we would try to add features including functionality to change base maps, display and track location, a legend, expandable widgets, sketching and measuring polylines, customized 
                             pop-ups and elevation profiles. We understood there could more features to add that would be appropriate trail map, but rationalized this would be sufficient for us to tackle within our 
                             limited time. </p>
                         <p>In the end, we were able to produce an interactive web-map that displays the trails and trailheads, gives user various viewing controls (zoom, pan, rotate) in a 3D environment, with 
                             location tracking, functionality to change base maps, legend, expandable widgets and create custom elevation profiles. </p>
-                        <h4>Discussion on shortfalls, limitations or what went wrong</h4>
+                        <h4>Discussion on Shortfalls, Limitations or What Went Wrong</h4>
                         <p>Throughout the process of developing a trail map of Vancouver Island Trail using ArcGIS API for JavaScript, the main challenges we encountered involved interpreting and adapting the sample 
                             codes to our needs. In essence, we were working at a high-level, recognizing syntax patterns and trying to see which codes worked via trial and error. There were many times when the sample 
                             codes provided in the tutorial did not work the way we wanted (if at all) and the documentation was either too vague or incomplete for us to resolve it. This was the case when trying to 
