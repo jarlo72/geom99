@@ -29,15 +29,15 @@
                 <!-- Start of Topic Selection -->
                 <article class="ContentParagraph1"><h3 class="underlineTitle1">Topic Selection</h3> 
                     <p> Our project centers on the Vancouver Island Trail on Vancouver Island in British Columbia.  The trail is currently under construction
-                        and is being promoted and monitored by the Vancouver Island Trail Association (aka VITA for short).
+                        and is being promoted and monitored by the Vancouver Island Trail Association (VITA).
                         Some members of or group are working with VITA for their final collaborative work, and this project is a first blush of web map possibilities
                         for the trail.</p>
                     
                     <article class = "serve leftText">
                         <div class="textZone">
                             <h5> Initial Overview</h5>
-                            <p> VITA's website contains only images of maps; there are no active interfaces for users and no capabilities for hikers to investigate sections of trails
-                            for possible hikes. VITA2022 therefore decided to focus on providing one or more options for an interactive web maps.  As described below, we floated an idea of integrating
+                            <p> VITA's website contains only PDF images of maps; there are no active interfaces for users and no capabilities for hikers to investigate sections of trails
+                            for possible hikes. Our group, VITA2022, therefore decided to focus on providing one or more options for an interactive web map solution.  As described below, we explored several ideas of integrating
                              various features into the interactive web map. 
                             </p>
                         </div>
@@ -53,10 +53,10 @@
                             forecasts to make an informative and accessible web map of the Vancouver Island Trail.  A map, possibly derived from either 
                             Google Maps JavaScript API or Leaflet, would include pop-up information on geo-referenced wildlife sightings from
                             <a href = https://www.inaturalist.org/ target="_blank">iNaturalist</a>, or possibly weather forecasts from <a href = https://openweathermap.org/ target="_blank">OpenWeather Live</a>.
-                            Base mapping data may also be sourced from <a href =https://www.openstreetmap.org/ target="_blank">Open Street Maps</a>.<br>
+                            Base mapping data was also to be sourced from <a href =https://www.openstreetmap.org/ target="_blank">Open Street Maps</a>.<br>
                             Upon review of Google Maps, however, we realized the potential cost to our non-profit client would be prohibitive,
                             so our focus shifted to other map options. Furthermore, it was pointed out to us that the project scope was too large 
-                            and we were advised to pull back our ambitions and focus solely on creating a web map.  We dropped the idea of incorporating the wildlife sightings
+                            and we were advised to pull back our ambitions and focus solely on creating a web map of the trail itself. We dropped the idea of incorporating the wildlife sightings
                             and weather forecasts.
                         </p>
                         </div>
@@ -74,10 +74,10 @@
                         <h5>Exploring Technologies for Map</h5>
                         <p> Team members researched additional alternative map solutions and explored online tutorials for Experience Builder, Geocortex, 
                             Leaflet, Mapbox, and StoryMaps.  Experience Builder can portray a map, but  its real power is to showcase data analysis and statistics.  These functions are not
-                            the  focus of this project, so Experience Builder was discarded.  Team member experience with Geocortex, and review of past Fleming projects revealed that Geocortex
-                            is not a reliable tool to use, so it too was put aside. Ultimately we opted to center on using either Esri Leaflet, StoryMaps, or Mapbox for the base map, 
+                            the  focus of this project, so Experience Builder was discarded.  Team member experience with Geocortex, and review of past Fleming College projects revealed that Geocortex
+                            is not a reliable tool to use, so it too was put aside. Ultimately, we opted to center on using either Esri Leaflet, StoryMaps, or Mapbox for the base map, 
                             stored on an ArcGIS server.  Since our client is a non-profit agency, we proposed to narrow our focus even more to use well-documented open source solutions.  
-                            However, at a meeting with our professor, we were directed to focus solely on showcasing our map within <a href="https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview" target="_blank">StoryMaps.</a>
+                            However, at a meeting with our professor, we were directed to focus showcasing our map within <a href="https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/overview" target="_blank">StoryMaps.</a>
                         </p>  
                         </div>
                         <figure class="picBox">
@@ -87,19 +87,11 @@
 
                     <article class = "serve rightText">
                         <div class = "textZone">
-                        <h5>Trail map using open-source Esri technologies</h5>
+                        <h5>Trail Map Using Open-Source Esri Technologies</h5>
                         <p> After the initial meeting with our professor about our direction using Esri Leaflet, StoryMaps, or Mapbox, we were directed towards specifically open-source Esri solutions.
-                            Taken it into consideration, our already proof working StoryMap that we've used initially before the scope change, we continued to develop the map and add more functionality.
-<<<<<<< HEAD
-                            For the hosting data portion of the project, we continued to use ArcGIS Online (AGOL) for contribution purposes and storage of map feature layers, the StoryMaps map, and other miscellaneous
-                            items for use in our project. Another component of the project that we decided to implement after a second touchbase with our professor was the use of ArcGIS API for JavaScript.
-                            This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" like tour, showcasing the different sections and trailheads 
-=======
-                            For the hosting data portion of the project, we continued to use <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank">ArcGIS Online (AGOL)</a> for contribution purposes and storage of map feature layers, the StoryMaps map, and other miscellaneous
-                            items for use in our project. Another component of the project that we decided to implement after a second touchbase with our professor was the use of <a href="https://developers.arcgis.com/javascript/latest/" target="_blank">ArcGIS API for JavaScript.</a>
-                            This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" like tour, showcasing the different sections and trail heads 
->>>>>>> edd7c7bf3352eebe85a3d67732dff2b5b80c9532
-                            throughout the trail system. In response to this, we decided to make an interactive "self-guided" version of our proposed map that allows the user to zoom in/out, see elevation profiles
+                            In response to the feedback, we continued to improve our StoryMaps solution to further develop content and web map functionality. For the hosting data portion of the project, we continued to use <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank">ArcGIS Online (AGOL)</a> for contribution purposes and storage of map feature layers, the StoryMaps map, and other data sources for use in our project. Another component of the project that we decided to implement after a second touchbase with our professor was the use of <a href="https://developers.arcgis.com/javascript/latest/" target="_blank">ArcGIS API for JavaScript.</a>
+                            This portion of the project was selected because the StoryMaps that we developed only gave the option of a "guided" tour, showcasing the different sections and trailheads 
+                            throughout the trail system. In response to this, we decided to make an interactive "self-guided" tour version of our proposed map that allows the user to zoom in/out, see elevation profiles
                             of different sections of the trail, select between different basemaps to extract more context out of the map, showcase their location using the location service, and have a quick glance
                             at the different trail sections by viewing the legend. 
                         </p>  
@@ -113,9 +105,9 @@
                         <div class = "textZone">
                         <h5>Sharing and contribution via ArcGIS Online (AGOL)</h5>
                         <p> Early on in the project, we had discussed and explored how and where our data for our trail maps will be stored. Based on that conversation along with a meeting with our professor on
-                            the matter, we decided to store, use, and contribute to AGOL; this was done my making a folder repository on AGOL and sharing it via an AGOL group. Once that was established, data found
-                            on VITA’s website and other additional data needed were brought into the AGOL folder environment which we used to make the StroyMaps map and store it along with the trail data for the ArcGIS
-                            API for Javascript map.
+                            the matter, we decided to store, use, and contribute to AGOL. To execute this, we created a shared update group with a folder repository of our project items on AGOL. Once the shared group and folder repository was established, data found
+                            on VITA’s website and other additional data needed were brought into the AGOL folder environment which we used to make the StoryMaps and store it along with the trail data for the ArcGIS
+                            API for JavaScript map.
                         </p>  
                         </div>  
                         <figure class="picBox">
@@ -135,32 +127,32 @@
                             and guidebook respectively. The trail tracks (polyline) and trailhead (points) would serve as the primary operational layers in this application</p> 
                         <p> Upon exploration of VITA’s resources, it was discovered that trail track data became increasingly sparse / unavailable towards the northern 
                             portion of the trail. The availability of this data dictated the geographic scope of our trail map, hence, the necessary scope change from earlier. 
-                            Thus, it was decided to only include the consistent southern portion of the Vancouver Island trail in our trail map, from Point Clover in Victoria, 
-                            BC to Port Alberni. </p> 
+                            Thus, it was decided to only include the consistent southern portion of the Vancouver Island Trail in our trail map, from Point Clover in Victoria, 
+                            British Columbia to Port Alberni. </p> 
                         <h4>Trail Track Data</h4>
                         <img class="solutionImage" src="images/Process images/geoJSON_io2.JPG" alt=" GeoJSON Map">
                         <p>Firstly, the trail tracks (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
-                            These GPX files were converted into a GeoJSON file using <a href = "https://geojson.io/#map=2/20.0/0.0">geojson.io</a>. This GeoJSON file would be 
+                            These GPX files were converted into a GeoJSON file using <a href = "https://geojson.io/#map=2/20.0/0.0">geojson.io</a>. This GeoJSON file was 
                             published into ArcGIS Online as a hosted feature layer.</p>
                         <h4>Trailhead Data</h4>
                         <p>Secondly, the trailhead data was needed in the form of point features. This was trickier since trailheads were not originally in digital format 
                             but in coordinate (latitude / longitude) descriptions in the trail guide-book. Similar to the trail track data, trailhead data became increasingly 
-                            sparse and inconsistent towards the northern portions and thus, for consistency and completeness, resorted to using only the southern trailheads from 
+                            sparse and inconsistent towards the northern portions and thus, for consistency and completeness, we resorted to using only the southern trailheads from 
                             Point Clover to Port Alberni. These trailheads aligned with the trail track data, however with a discrepancy that 14 trailhead points were acquired in 
-                            contrast to the 7 trail tracks/ segments acquired earlier. It was found that the 7 trail segments used the same trailheads to define the start-end of 
-                            the segment just at a different frequency. Thus, the trailhead and trail track data are valid.  Forming trailhead data in csv from trail guide-book and 
-                            publishing as hosted feature layer</p>
+                            contrast to the 7 trail tracks/segments acquired previsouly. It was found that the 7 trail segments used the same trailheads to define the start-end of 
+                            the segment just at a different distances. Thus, the trailhead and trail track data are valid. We formed the trailhead data in a CSV format from the trail guide-book on the VITA website and 
+                            published the trail heads as a hosted feature layer</p>
                         <p>A CSV file was drafted to store and tabulate the trailhead latitude and longitude coordinates. In this table, trailhead start and end names and length were included. 
                             This CSV file would then be published onto ArcGIS Online as a hosted feature layer, with the lat/long coordinates representing the point feature. </p>
                         <h4>Initial Base Map</h4>
                         <p>With the trail tracks (polyline features) and trailhead (point) features, an initial web map was created with appropriate symbology set up to emphasize the trail data: 
                             <a href="https://fleming.maps.arcgis.com/apps/mapviewer/index.html?webmap=46df05449e524dc0993b114f96eaa12c">Vancouver Island Trail Map</a>. This web-map would serve as 
-                            the basis to upon other configurable solutions may be built upon.</p> 
+                            the basemap for configurable solutions to be built upon.</p> 
                         <img class="solutionImage" src="images/Process images/AGOL_basemap2.jpg" alt=" GeoJSON Map">  
                     </div>
                 </article>
 
-                <!-- Start of Story Maps -->
+                <!-- Start of StoryMaps -->
                 <article> 
                     <div class="ContentParagraph"><h3 class="underlineTitle">Creating a StoryMaps Map</h3>
                         <h4>Lead-Up</h4> 
@@ -220,7 +212,7 @@
                 <article> 
                     <div class="ContentParagraph"><h3 class="underlineTitle">Creating an ArcGIS API for JavaScript Map</h3> 
                         <h4>Lead-Up</h4>
-                        <p> Our next objective was to find a more customizable solution that would act as a self-guided tour (ie more interactive features) that would be complimentary to the story maps. 
+                        <p> Our next objective was to find a more customizable solution that would act as a self-guided tour (ie more interactive features) that would be complimentary to the StoryMaps. 
                             A potential solution would be something like the <a href = "https://github.com/Esri/hiking-trails-app">Swiss hiking trail application</a>. Our approach would be to use the provided libraries, 
                             coding and documentation but alter the service and data to match what we have. Unfortunately, due to technical problems getting this application built and running with the base 
                             data alone, we abandoned this resource. It seemed either beyond our skill-level or beyond scope of our project (i.e. not a good use of time) to troubleshoot these errors. However, 
@@ -250,15 +242,15 @@
                             trail they’d like to hike. In this case, a lot of time was spent figuring out why the sketch and measurement outputs would not display on the map, despite the widget and sketching operations 
                             being apparent. In the end, it was found that the graphic layer wasn’t being “viewed” on the right layer, and hence was being hidden. It would work after this, however, upon discussion, we 
                             rationalized that this feature was clunky and did not add value to the trail map.  </p>
-                        <p>We instead opted for an Elevation Profile which provides more extensive features that is valuable to the user and has provided modules, accessible documentation and sample code to reference. 
+                        <p>We instead opted for an elevation profile widget which provides more extensive features than measuring a polyline and is more valuable to the user and has provided modules, accessible documentation and sample code to reference. 
                             Again, there were initial difficulty integrating the code. Fortunately, some of the code from the now-obsolete polyline sketching feature worked well with the elevation profile. A little more 
-                            re-arranging and variable renaming and now an Elevation profile functionality is enabled. Although the polyline sketch/measurement was a misstep in hindsight, the knowledge (and coding) gained 
+                            re-arranging and variable renaming and now an elevation profile functionality is enabled. Although the polyline sketch/measurement was a misstep in hindsight, the knowledge (and coding) gained 
                             from it helped to produce an even better end-product. </p>
                         <h4>Lessons Learned</h4>
                         <p>We realized that to adapt the provided code to the way we want it, a comprehensive, low-level understanding of what the code is required; a high-level understanding is not sufficient when troubleshooting. 
                             This could be achieved mainly by spending time exploring the documentation and gaining experience. </p>
                         <p>With this in mind, developing an application does not seem so daunting when considering the resources to draw from. We understand now that it is more efficient and even encouraged to build upon existing 
-                            works rather than starting from scratch (ie don’t re-invent the wheel) </p>     
+                            works rather than starting from scratch (ie don’t re-invent the wheel). </p>     
                     </div>
                 </article>
    
