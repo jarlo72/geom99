@@ -250,24 +250,6 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     padding: 5px;
 }
 
-
-#landingPic { 
-    background-image: src="/images/hiking.jpg";
-    height: 50vw;
-    background-size: cover;
-    background-position: 50% 30%;
-    background-repeat: no-repeat; /* background image and details added for header graphic */
-    display: flex; /* as per https://www.w3schools.com/css/css3_flexbox.asp */
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.landingTitle {
-    text-align: center;
-    margin-top: 20px;
-}
-
-
 /* --------------------------------------- Methodology Page Styling ------------------------- */ 
 .ContentParagraph1 { /* styling for initial paragraph on this page */
     padding-top:2px;
@@ -296,9 +278,7 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     margin-top: 0;
     padding-top: 0;
 }
-.introText{
-    text-align:justified
-}
+
 .leftText {             /*Left-aligned sections use default attributes */
     flex-direction: row;
 }
