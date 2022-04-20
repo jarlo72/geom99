@@ -7,3 +7,4 @@ For now, we will be using GitHub as our primary development platform. I imagine 
 ### https://jarlo72.github.io/web1/index.html
 ### https://jarlo72.github.io/web1/process.html
 ### https://jarlo72.github.io/web1/solution.html
+### https://jarlo72.github.io/web1/stylesheet.css
